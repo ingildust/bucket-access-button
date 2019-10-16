@@ -34,3 +34,7 @@ See: https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-
 
 Not using Terraform? That's a shame! I'd love you to contribute a CloudFormation template or
 instructions.
+
+## For multple aws config:
+
+alias aws='docker run --rm -t $(tty &>/dev/null && echo "-i") -e "AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}" -e "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}" -e "AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION}" -v "$(pwd):/project" mesosphere/aws-cli'
